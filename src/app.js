@@ -43,7 +43,7 @@ app.use("/notificaciones", apiRouterNotificaciones);
 const apiRouterAvisos = require("./routes/avisos");
 app.use("/avisos", apiRouterAvisos);
 
-app.get("/", (req, res) => {
+app.get("/api/bienvenida", (req, res) => {
     res.status(200).send({message: "Bienvenido a la API de policia"});
 })
 
