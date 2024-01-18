@@ -43,6 +43,10 @@ app.use("/notificaciones", apiRouterNotificaciones);
 const apiRouterAvisos = require("./routes/avisos");
 app.use("/avisos", apiRouterAvisos);
 
+app.get("/", (req, res) => {
+    res.status(200).send({message: "Bienvenido a la API de policia"});
+})
+
 app.listen(port, () => {
     signale.success("Servidor iniciado en el puerto:", port);
 })
