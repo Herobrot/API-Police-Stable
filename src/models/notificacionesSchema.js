@@ -3,7 +3,6 @@ const model = require('mongoose').model;
 
 const notificacionesSchema = new Schema({
 
-
     idUsuario: {
         type: Schema.Types.ObjectId,
         required: true,
@@ -23,8 +22,13 @@ const notificacionesSchema = new Schema({
     fecha: {
         type: Date,
         required: true
-    }
+    },
 
+    categoria:{
+        type: String,
+        required: true,
+        enum: ["Recordatorio", "Registro", "Estatus"]
+    }
 });
 
 const Notificaciones = model('Notificaciones', notificacionesSchema);

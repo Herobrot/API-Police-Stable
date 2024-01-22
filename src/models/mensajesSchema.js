@@ -3,13 +3,6 @@ const model = require('mongoose').model;
 
 const mensajesSchema = new Schema({
 
-
-    idUsuario: {
-        type: Schema.Types.ObjectId,
-        required: true,
-        ref: 'Usuarios'
-    },
-
     mensaje: {
         type: String,
         required: true
@@ -18,6 +11,12 @@ const mensajesSchema = new Schema({
     fecha: {
         type: Date,
         required: true
+    },
+
+    idUsuario: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'Usuarios'
     }
 
 });
